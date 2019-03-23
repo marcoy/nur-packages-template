@@ -8,7 +8,11 @@
 
 { pkgs ? import <nixpkgs> {} }:
 
-rec {
+let
+  kalbasitRepo = import (builtins.fetchTarball https://github.com/kalbasit/nur-packages/tarball/master) {
+    inherit pkgs;
+  };
+in rec {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
@@ -16,5 +20,6 @@ rec {
 
   romkatv-gitstatus = pkgs.callPackage ./pkgs/powerlevel10k/romkatv-gitstatus.nix {};
   powerlevel10k = pkgs.callPackage ./pkgs/powerlevel10k { gitstatus = romkatv-gitstatus; };
+  nixify = kalbasitRepo.nixify;
 }
 
