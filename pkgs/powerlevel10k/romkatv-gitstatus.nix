@@ -7,8 +7,8 @@ in stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "romkatv";
     repo = "gitstatus";
-    rev = "277a9908ede4c7b99b54d4f1fb37994777e4a1b5";
-    sha256 = "0dsqbxl3s990675rscpnq2h0vnzh8vl1nmdkznbyh338as9vnyzi";
+    rev = "2d469d2d7befe2cc7736e5a54ca484f0f27e33ba";
+    sha256 = "170d79flly1hzyqcyfs9i2ij2njny1cqzirz87n1cinvaz7qyd5f";
   };
 
   nativeBuildInputs = [ libgit2 ];
