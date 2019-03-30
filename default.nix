@@ -21,6 +21,7 @@ in rec {
   gatsby-cli = pkgs.callPackage ./pkgs/gatsby-cli {};
   romkatv-gitstatus = pkgs.callPackage ./pkgs/powerlevel10k/romkatv-gitstatus.nix {};
   powerlevel10k = pkgs.callPackage ./pkgs/powerlevel10k { gitstatus = romkatv-gitstatus; };
+  "asciidoctor.js" = pkgs.callPackage ./pkgs/asciidoctor-js { };
   nixify = kalbasitRepo.nixify;
 }
 
