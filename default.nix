@@ -21,6 +21,7 @@ in rec {
   romkatv-gitstatus = pkgs.callPackage ./pkgs/powerlevel10k/romkatv-gitstatus.nix {};
   powerlevel10k = pkgs.callPackage ./pkgs/powerlevel10k { gitstatus = romkatv-gitstatus; };
   nixify = kalbasitRepo.nixify;
+  asciidoctor = pkgs.callPackage ./pkgs/asciidoctor {};
   nodePackagesExtra = pkgs.callPackage ./pkgs/node-packages-extra {};
 }
 
