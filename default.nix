@@ -18,11 +18,9 @@ in rec {
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  gatsby-cli = pkgs.callPackage ./pkgs/gatsby-cli {};
   romkatv-gitstatus = pkgs.callPackage ./pkgs/powerlevel10k/romkatv-gitstatus.nix {};
   powerlevel10k = pkgs.callPackage ./pkgs/powerlevel10k { gitstatus = romkatv-gitstatus; };
-  "asciidoctor.js" = pkgs.callPackage ./pkgs/asciidoctor-js {};
-  asciidoctor = pkgs.callPackage ./pkgs/asciidoctor {};
   nixify = kalbasitRepo.nixify;
+  nodePackagesExtra = pkgs.callPackage ./pkgs/node-packages-extra {};
 }
 

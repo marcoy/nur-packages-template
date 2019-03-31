@@ -1,0 +1,6 @@
+[
+  "@asciidoctor/core",
+  "@asciidoctor/cli",
+  "gatsby-cli",
+  "react-static"
+]
