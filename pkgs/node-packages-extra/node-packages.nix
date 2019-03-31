@@ -12639,4 +12639,109 @@ in
     production = true;
     bypassCache = true;
   };
+  serve = nodeEnv.buildNodePackage {
+    name = "serve";
+    packageName = "serve";
+    version = "10.1.2";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/serve/-/serve-10.1.2.tgz";
+      sha512 = "TVH35uwndRlCqSeX3grR3Ntrjx2aBTeu6sx+zTD2CzN2N/rHuEDTvxiBwWbrellJNyWiQFz2xZmoW+UxV+Zahg==";
+    };
+    dependencies = [
+      sources."@zeit/schemas-2.6.0"
+      sources."accepts-1.3.5"
+      sources."ajv-6.5.3"
+      sources."ansi-align-2.0.0"
+      sources."ansi-regex-3.0.0"
+      sources."ansi-styles-3.2.1"
+      sources."arch-2.1.1"
+      sources."arg-2.0.0"
+      sources."balanced-match-1.0.0"
+      sources."boxen-1.3.0"
+      sources."brace-expansion-1.1.11"
+      sources."bytes-3.0.0"
+      sources."camelcase-4.1.0"
+      sources."chalk-2.4.1"
+      sources."cli-boxes-1.0.0"
+      (sources."clipboardy-1.2.3" // {
+        dependencies = [
+          sources."execa-0.8.0"
+        ];
+      })
+      sources."color-convert-1.9.3"
+      sources."color-name-1.1.3"
+      sources."compressible-2.0.16"
+      sources."compression-1.7.3"
+      sources."concat-map-0.0.1"
+      sources."content-disposition-0.5.2"
+      sources."cross-spawn-5.1.0"
+      sources."debug-2.6.9"
+      sources."deep-extend-0.6.0"
+      sources."escape-string-regexp-1.0.5"
+      sources."execa-0.7.0"
+      sources."fast-deep-equal-2.0.1"
+      sources."fast-json-stable-stringify-2.0.0"
+      (sources."fast-url-parser-1.1.3" // {
+        dependencies = [
+          sources."punycode-1.4.1"
+        ];
+      })
+      sources."get-stream-3.0.0"
+      sources."has-flag-3.0.0"
+      sources."ini-1.3.5"
+      sources."is-fullwidth-code-point-2.0.0"
+      sources."is-stream-1.1.0"
+      sources."isexe-2.0.0"
+      sources."json-schema-traverse-0.4.1"
+      sources."lru-cache-4.1.5"
+      sources."mime-db-1.38.0"
+      sources."mime-types-2.1.22"
+      sources."minimatch-3.0.4"
+      sources."minimist-1.2.0"
+      sources."ms-2.0.0"
+      sources."negotiator-0.6.1"
+      sources."npm-run-path-2.0.2"
+      sources."on-headers-1.0.2"
+      sources."p-finally-1.0.0"
+      sources."path-is-inside-1.0.2"
+      sources."path-key-2.0.1"
+      sources."path-to-regexp-2.2.1"
+      sources."pseudomap-1.0.2"
+      sources."punycode-2.1.1"
+      sources."range-parser-1.2.0"
+      sources."rc-1.2.8"
+      sources."registry-auth-token-3.3.2"
+      sources."registry-url-3.1.0"
+      sources."safe-buffer-5.1.2"
+      (sources."serve-handler-5.0.8" // {
+        dependencies = [
+          sources."mime-db-1.33.0"
+          sources."mime-types-2.1.18"
+        ];
+      })
+      sources."shebang-command-1.2.0"
+      sources."shebang-regex-1.0.0"
+      sources."signal-exit-3.0.2"
+      sources."string-width-2.1.1"
+      sources."strip-ansi-4.0.0"
+      sources."strip-eof-1.0.0"
+      sources."strip-json-comments-2.0.1"
+      sources."supports-color-5.5.0"
+      sources."term-size-1.2.0"
+      sources."update-check-1.5.2"
+      sources."uri-js-4.2.2"
+      sources."vary-1.1.2"
+      sources."which-1.3.1"
+      sources."widest-line-2.0.1"
+      sources."yallist-2.1.2"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "Static file serving and directory listing";
+      homepage = "https://github.com/zeit/serve#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+  };
 }
