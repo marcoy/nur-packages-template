@@ -23,5 +23,6 @@ in rec {
   nixify = kalbasitRepo.nixify;
   asciidoctor = pkgs.callPackage ./pkgs/asciidoctor {};
   nodePackagesExtra = pkgs.callPackage ./pkgs/node-packages-extra {};
+  set-interpreter = pkgs.callPackage ./pkgs/set-interpreter {};
 }
 
