@@ -25,5 +25,5 @@ let
   };
 in {
   inherit asciidoctor;
-  inherit (extraNodePackages) gatsby-cli react-static serve;
+  inherit (extraNodePackages) bs-platform gatsby-cli react-static serve;
 }

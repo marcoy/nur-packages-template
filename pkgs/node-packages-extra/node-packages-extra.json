@@ -1,6 +1,7 @@
 [
   "@asciidoctor/core",
   "@asciidoctor/cli",
+  "bs-platform",
   "gatsby-cli",
   "react-static",
   "serve"
